@@ -55,28 +55,28 @@ public class Homework02 {
     }
 
 
-    //TODO powt zad 4
-    private static void calculateWords(String input){
-
-        String[] words = new String[];
-        words = input.split(" ");
-
-        Map<String, Integer> wordsMap = new HashMap<String, Integer>();
-
-        for (String s : words) {
-
-            int count = 0;
-            if (wordsMap.containsKey(s)) {
-                count++;
-
-                wordsMap.put(s, count);
-            }
-
-            System.out.println(wordsMap);
-
-        }
-
-    }
+//    //TODO powt zad 4
+//    private static void calculateWords(String input){
+//
+//        String[] words = new String[];
+//        words = input.split(" ");
+//
+//        Map<String, Integer> wordsMap = new HashMap<String, Integer>();
+//
+//        for (String s : words) {
+//
+//            int count = 0;
+//            if (wordsMap.containsKey(s)) {
+//                count++;
+//
+//                wordsMap.put(s, count);
+//            }
+//
+//            System.out.println(wordsMap);
+//
+//        }
+//
+//    }
 
 
     public static void main(String[] args) {
@@ -96,7 +96,7 @@ public class Homework02 {
 
 
         String stringInput = "pies kasia kot pies kot pies";
-        System.out.println(calculateWords(stringInput));
+
 
 
     }
