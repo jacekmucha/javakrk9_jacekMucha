@@ -1,3 +1,5 @@
+package z05;
+
 import org.junit.Test;
 import z01.IntroduceTask;
 

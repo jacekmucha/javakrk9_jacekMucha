@@ -1,11 +1,50 @@
 package z02;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsDemo {
+
+
+    private static class Box{
+        private String name;
+        private Integer val;
+
+        public Box(String name, Integer val) {
+            this.name = name;
+            this.val = val;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Integer getVal() {
+            return val;
+        }
+
+        public void setVal(Integer val) {
+            this.val = val;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Box box = (Box) o;
+            return Objects.equals(name, box.name) &&
+                    Objects.equals(val, box.val);
+        }
+
+        @Override
+        public int hashCode() {
+
+            return Objects.hash(name, val);
+        }
+    }
 
 
     private static String print(List list){
@@ -51,7 +90,7 @@ public class CollectionsDemo {
         words.add("String");
 
         //dodaje elementy to prepełnienia listy, potem tworzy nową, większą liste i kopiuje do niej to, co było w liście wczeniejszej
-
+        //ArrayListy używamy, gdy jest dużo wywołać metody .get(i)
 
 
         List<Double> numbers = new LinkedList<Double>(); // zlozonosc O(logn)
@@ -59,11 +98,27 @@ public class CollectionsDemo {
         // (prev, 23.1, next) -> lista dwukierunkowa
         numbers.add(99.0);
         // (23.1, 99.0, next) -> lista dwukierunkowa // każdy obiekt listy wskazuje na swój poprzednik i następnik
+        // używamy, gdy dominuje usuwanie elementów
+
 
         print(numbers);
 
-
         System.out.println(join(Arrays.asList("dog", "theory", "wolf", "computer"), 4, 7));
+
+
+        HashSet<String> wordSet = new HashSet<>();
+        wordSet.add("jeden");
+        wordSet.add("jeden");
+
+        System.out.println(wordSet.size());
+
+
+        Set<Box> set = new HashSet<>();
+
+        set.add(new Box("box1",10));
+        set.add(new Box("box1",10));
+
+        System.out.println(set.size());
 
 
 
