@@ -2,6 +2,12 @@ package z03;
 
 public class StringHelper {
 
+    public static String reverse(String str){
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
+
+
 
     private static int insert (char[]t, char letter, int i, int n){
         for(int k =0; k<n;k++) {

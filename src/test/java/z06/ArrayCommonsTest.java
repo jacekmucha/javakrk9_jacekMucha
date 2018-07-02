@@ -3,6 +3,9 @@ package z06;
 import org.junit.Test;
 import z03.InvalidArgumentException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class ArrayCommonsTest {
@@ -52,5 +55,7 @@ public class ArrayCommonsTest {
 
         assertTrue(res[0].equals((3.6)) && res[1].equals(0.0) && res[2].equals(6.8));
     }
+
+
 
 }

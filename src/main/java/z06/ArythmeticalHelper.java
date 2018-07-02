@@ -14,6 +14,12 @@ public class ArythmeticalHelper {
         return x * y;
     }
 
+    public static Double difference (Double a, Double b){
+        return a-b;
+    }
 
+    public static Double maxAbsValue (Double x, Double y){
+        return Math.max(Math.abs(x), Math.abs(y));
+    }
 
 }
